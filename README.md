@@ -28,6 +28,14 @@ Gives you the hash of a GitHub repo. Extremely useful when using `fetchFromGitHu
 pfgh <owner> <repo> (branch) (hash)
 ```
 
+## mk-flake
+
+Makes a really basic Nix Flake so you can skip most of the boilerplate.
+
+```nu
+mk-flake <name>
+```
+
 # fix-ct-ost (Fix Clustertruck OST)
 
 The OST for Clustertruck on Steam plays out of order.
@@ -39,3 +47,27 @@ Make sure you are in `~/.steam/steam/steamapps/music/Clustertruck OST/OST` when 
 A Hat in Time's B-Side OST tracks 1-99 are padded to 2 digits when they should be padded to 3 digits.
 This script fixes it by adding a leading zero to tracks that need it.
 Make sure you are in `~/.steam/steam/steamapps/music/A Hat in Time - B-Side Soundtrack` when running this script.
+
+# mk-project
+
+Initializes a project with a `flake.nix`, License File, a `README.md`, a `.envrc`, and a `.gitignore`
+
+```nu
+mk-project <name> <license>
+```
+
+## license
+
+Downloads a license file. PR if you wanna add a new license to this.
+
+```nu
+license <license> (filename)
+```
+
+## readme
+
+Makes a `README.md` file just like how GitHub would.
+
+```nu
+readme <name> (description)
+```
