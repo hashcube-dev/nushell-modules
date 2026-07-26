@@ -3,7 +3,7 @@ export def main [
 	filename? = "LICENSE"
 ] {
 	let span = (metadata $license).span;
-	let url = match ($license | str downcase) {
+	let url = match ($license | str lowercase) {
 		"mit" => "https://mit-license.org/license.txt"
 		"apache-2.0" => "https://www.apache.org/licenses/LICENSE-2.0.txt"
 		"apache" => "https://www.apache.org/licenses/LICENSE-2.0.txt"
@@ -11,6 +11,8 @@ export def main [
 		"gpl-2.0" => "https://www.gnu.org/licenses/old-licenses/gpl-2.0.txt"
 		"gplv3" => "https://www.gnu.org/licenses/gpl-3.0.txt"
 		"gpl-3.0" => "https://www.gnu.org/licenses/gpl-3.0.txt"
+    "agplv3" => "https://www.gnu.org/licenses/agpl-3.0.txt"
+    "agpl-3.0" => "https://www.gnu.org/licenses/agpl-3.0.txt"
 		_ => ""
 	}
 	if ($url == "") {

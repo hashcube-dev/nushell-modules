@@ -12,5 +12,5 @@ export def main [
 	license $license
 	readme $name
 	"use flake" | save .envrc
-	"result/\n.direnv/" | save .gitignore
+	"result\n.direnv" | save .gitignore
 }
